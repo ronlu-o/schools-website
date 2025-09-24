@@ -6,53 +6,52 @@ const schools = [
   { ranking: 1, school: "Carnegie Mellon University", program: "Master of Human-Computer Interaction (MHCI)", length: "1 year", tuition: "$86,250", location: "Pittsburgh, PA", deadline: "Jan 15, 2026", portfolio: "Optional" },
   { ranking: 2, school: "University of Washington", program: "Master of HCI + Design (MHCID)", length: "1 year", tuition: "$52,700", location: "Seattle, WA", deadline: "Jan 15, 2026", portfolio: "Optional" },
   { ranking: 3, school: "University of Washington", program: "M.S. in Human Centered Design & Engineering (HCDE)", length: "2 years", tuition: "$25,000", location: "Seattle, WA", deadline: "Jan 15, 2026", portfolio: "Not Required" },
-  { ranking: 4, school: "Stanford University", program: "M.S. in Design Impact", length: "2 years", tuition: "$42,300", location: "Stanford, CA", deadline: "Early Dec 2025", portfolio: "Required (Website)" },
-  { ranking: 5, school: "Georgia Institute of Technology", program: "M.S. in Human-Computer Interaction (MS-HCI)", length: "2 years", tuition: "$26,600", location: "Atlanta, GA", deadline: "Feb 1, 2026", portfolio: "Required (LMC/ID Tracks)" },
+  { ranking: 4, school: "Georgia Institute of Technology", program: "M.S. in Human-Computer Interaction (MS-HCI)", length: "2 years", tuition: "$26,600", location: "Atlanta, GA", deadline: "Feb 1, 2026", portfolio: "Required (LMC/ID Tracks)" },
 
   // Tier 2: The Powerhouses
-  { ranking: 6, school: "University of Michigan", program: "M.S. in Information (MSI)", length: "2 years", tuition: "$30,600", location: "Ann Arbor, MI", deadline: "Jan 15, 2026 (Priority)", portfolio: "Not Required" },
-  { ranking: 7, school: "University of California, Berkeley", program: "Master of Information Management and Systems (MIMS)", length: "2 years", tuition: "$46,100", location: "Berkeley, CA", deadline: "Early Jan 2026", portfolio: "Not Required" },
-  { ranking: 8, school: "University of Maryland", program: "M.S. in Human-Computer Interaction (HCIM)", length: "2 years", tuition: "$29,000", location: "College Park, MD", deadline: "Jan 5, 2026", portfolio: "Required" },
-  { ranking: 9, school: "Purdue University", program: "M.S. in Computer Graphics Technology (UX Design)", length: "2 years", tuition: "$29,200", location: "West Lafayette, IN", deadline: "Feb 1, 2026", portfolio: "Required" },
-  { ranking: 10, school: "University of California, Irvine", program: "Master of Human-Computer Interaction & Design (MHCID)", length: "1 year", tuition: "$49,500", location: "Irvine, CA", deadline: "Mar 15, 2026", portfolio: "Required" },
-  { ranking: 11, school: "Cornell University", program: "M.P.S. in Information Science", length: "1 year", tuition: "$42,700", location: "Ithaca, NY", deadline: "Jan 5, 2026", portfolio: "Not Required" },
+  { ranking: 5, school: "University of Michigan", program: "M.S. in Information (MSI)", length: "2 years", tuition: "$30,600", location: "Ann Arbor, MI", deadline: "Jan 15, 2026 (Priority)", portfolio: "Not Required" },
+  { ranking: 6, school: "University of California, Berkeley", program: "Master of Information Management and Systems (MIMS)", length: "2 years", tuition: "$46,100", location: "Berkeley, CA", deadline: "Jan 6, 2026", portfolio: "Not Required" },
+  { ranking: 7, school: "University of Maryland", program: "M.S. in Human-Computer Interaction (HCIM)", length: "2 years", tuition: "$29,000", location: "College Park, MD", deadline: "Jan 5, 2026", portfolio: "Required" },
+  { ranking: 8, school: "Purdue University", program: "M.S. in Computer Graphics Technology (UX Design)", length: "2 years", tuition: "$29,200", location: "West Lafayette, IN", deadline: "Feb 1, 2026", portfolio: "Required" },
+  { ranking: 9, school: "University of California, Irvine", program: "Master of Human-Computer Interaction & Design (MHCID)", length: "1 year", tuition: "$49,500", location: "Irvine, CA", deadline: "Mar 15, 2026", portfolio: "Required" },
+  { ranking: 10, school: "Cornell University", program: "M.P.S. in Information Science", length: "1 year", tuition: "$42,700", location: "Ithaca, NY", deadline: "Jan 5, 2026", portfolio: "Not Required" },
 
   // Tier 3: The Specialists and Rising Stars
-  { ranking: 12, school: "Indiana University Bloomington", program: "M.S. in Human-Computer Interaction/design (HCI/d)", length: "2 years", tuition: "$30,800", location: "Bloomington, IN", deadline: "Jan 1, 2026", portfolio: "Required" },
-  { ranking: 13, school: "University of Texas at Austin", program: "M.S. in Information Studies (MSIS)", length: "2 years", tuition: "$37,100", location: "Austin, TX", deadline: "Jan 5, 2026", portfolio: "Not Required" },
-  { ranking: 14, school: "Northwestern University", program: "M.S. in Engineering Design Innovation (EDI)", length: "2 years", tuition: "$23,000 (per quarter)", location: "Evanston, IL", deadline: "Jan 15, 2026 (Priority)", portfolio: "Required" },
-  { ranking: 15, school: "Tufts University", program: "M.S. in Human Factors Engineering", length: "2 years", tuition: "$54,000", location: "Medford, MA", deadline: "Jan 15, 2026", portfolio: "Not Required" },
-  { ranking: 16, school: "San Jose State University", program: "M.S. in Human Factors and Ergonomics", length: "2 years", tuition: "$14,700", location: "San Jose, CA", deadline: "Feb 1, 2026", portfolio: "Optional" },
-  { ranking: 17, school: "Arizona State University", program: "M.S. in User Experience", length: "2 years", tuition: "$37,100", location: "Tempe, AZ", deadline: "Rolling", portfolio: "Optional" },
-  { ranking: 18, school: "DePaul University", program: "M.S. in Human-Computer Interaction", length: "2 years", tuition: "$30,600", location: "Chicago, IL", deadline: "Jun 15, 2026 (Int'l)", portfolio: "Not Required" },
-  { ranking: 19, school: "Rochester Institute of Technology", program: "M.S. in Human-Computer Interaction", length: "2 years", tuition: "$38,600", location: "Rochester, NY", deadline: "Feb 15, 2026 (Priority)", portfolio: "Not Required" },
-  { ranking: 20, school: "University of California, Davis", program: "M.S. in Computer Science (HCI Focus)", length: "2 years", tuition: "$15,166", location: "Davis, CA", deadline: "Dec 15, 2025", portfolio: "Not Required" },
-  { ranking: 21, school: "Drexel University", program: "M.S. in Information (HCI/UX)", length: "2 years", tuition: "$37,100", location: "Philadelphia, PA", deadline: "Jul 15, 2025 (Int'l)", portfolio: "Not Required" },
-  { ranking: 22, school: "Illinois Institute of Technology", program: "Master of Design (MDes)", length: "2 years", tuition: "$51,000", location: "Chicago, IL", deadline: "Jan 22, 2026 (Round 1)", portfolio: "Required" },
-  { ranking: 23, school: "University of Colorado Boulder", program: "M.S. in Creative Technology & Design", length: "2 years", tuition: "$32,200", location: "Boulder, CO", deadline: "Feb 15, 2026", portfolio: "Required" },
-  { ranking: 24, school: "Indiana University–Purdue University Indianapolis", program: "M.S. in Human-Computer Interaction", length: "2 years", tuition: "$27,300", location: "Indianapolis, IN", deadline: "Mar 1, 2026", portfolio: "Required" },
-  { ranking: 25, school: "Iowa State University", program: "M.S. in Human Computer Interaction", length: "2 years", tuition: "$24,700", location: "Ames, IA", deadline: "Jan 15, 2026", portfolio: "Not Required" },
-  { ranking: 26, school: "Bentley University", program: "M.S. in Human Factors in Information Design", length: "2 years", tuition: "$58,700", location: "Waltham, MA", deadline: "Mar 15, 2026", portfolio: "Not Required" },
+  { ranking: 11, school: "Indiana University Bloomington", program: "M.S. in Human-Computer Interaction/design (HCI/d)", length: "2 years", tuition: "$30,800", location: "Bloomington, IN", deadline: "Jan 1, 2026", portfolio: "Required" },
+  { ranking: 12, school: "University of Texas at Austin", program: "M.S. in Information Studies (MSIS)", length: "2 years", tuition: "$37,100", location: "Austin, TX", deadline: "Jan 5, 2026", portfolio: "Not Required" },
+  { ranking: 13, school: "Northwestern University", program: "M.S. in Engineering Design Innovation (EDI)", length: "2 years", tuition: "$68,919", location: "Evanston, IL", deadline: "Jan 15, 2026 (Priority)", portfolio: "Required" },
+  { ranking: 14, school: "Tufts University", program: "M.S. in Human Factors Engineering", length: "2 years", tuition: "$54,000", location: "Medford, MA", deadline: "Jan 15, 2026", portfolio: "Not Required" },
+  { ranking: 15, school: "San Jose State University", program: "M.S. in Human Factors and Ergonomics", length: "2 years", tuition: "$14,700", location: "San Jose, CA", deadline: "Feb 1, 2026", portfolio: "Optional" },
+  { ranking: 16, school: "Arizona State University", program: "M.S. in User Experience", length: "2 years", tuition: "$37,100", location: "Tempe, AZ", deadline: "Rolling", portfolio: "Optional" },
+  { ranking: 17, school: "DePaul University", program: "M.S. in Human-Computer Interaction", length: "2 years", tuition: "$30,600", location: "Chicago, IL", deadline: "Jun 15, 2026 (Int'l)", portfolio: "Not Required" },
+  { ranking: 18, school: "Rochester Institute of Technology", program: "M.S. in Human-Computer Interaction", length: "2 years", tuition: "$38,600", location: "Rochester, NY", deadline: "Feb 15, 2026 (Priority)", portfolio: "Not Required" },
+  { ranking: 19, school: "University of California, Davis", program: "M.S. in Computer Science (HCI Focus)", length: "2 years", tuition: "$15,166", location: "Davis, CA", deadline: "Dec 15, 2025", portfolio: "Not Required" },
+  { ranking: 20, school: "Drexel University", program: "M.S. in Information (HCI/UX)", length: "2 years", tuition: "$37,100", location: "Philadelphia, PA", deadline: "Aug 15, 2026", portfolio: "Not Required" },
+  { ranking: 21, school: "Illinois Institute of Technology", program: "Master of Design (MDes)", length: "2 years", tuition: "$51,000", location: "Chicago, IL", deadline: "Jan 22, 2026 (Round 1)", portfolio: "Required" },
+  { ranking: 22, school: "University of Colorado Boulder", program: "M.S. in Creative Technology & Design", length: "2 years", tuition: "$32,200", location: "Boulder, CO", deadline: "Feb 15, 2026", portfolio: "Required" },
+  { ranking: 23, school: "Indiana University–Purdue University Indianapolis", program: "M.S. in Human-Computer Interaction", length: "2 years", tuition: "$27,300", location: "Indianapolis, IN", deadline: "Mar 1, 2026", portfolio: "Required" },
+  { ranking: 24, school: "Iowa State University", program: "M.S. in Human Computer Interaction", length: "2 years", tuition: "$24,700", location: "Ames, IA", deadline: "Jan 15, 2026", portfolio: "Not Required" },
+  { ranking: 25, school: "Bentley University", program: "M.S. in Human Factors in Information Design", length: "2 years", tuition: "$58,700", location: "Waltham, MA", deadline: "Mar 15, 2026", portfolio: "Not Required" },
 
   // Tier 4: Programs of Distinction
-  { ranking: 27, school: "Pratt Institute", program: "M.S. in Information Experience Design", length: "2 years", tuition: "$32,600", location: "New York, NY", deadline: "Jan 5, 2026 (Priority)", portfolio: "Not Required" },
-  { ranking: 28, school: "Savannah College of Art and Design", program: "M.F.A. in User Experience (UX) Design", length: "2 years", tuition: "$42,100", location: "Savannah, GA", deadline: "Rolling", portfolio: "Required" },
-  { ranking: 29, school: "Maryland Institute College of Art", program: "M.P.S. in UX Design", length: "1 year", tuition: "$37,500", location: "Baltimore, MD", deadline: "Rolling", portfolio: "Optional" },
-  { ranking: 30, school: "University of Wisconsin-Madison", program: "M.S. in Design + Innovation", length: "1 year", tuition: "$48,000", location: "Madison, WI", deadline: "Jul 1, 2026", portfolio: "Required" },
-  { ranking: 31, school: "Rutgers University", program: "M.B.S. in User Experience Design", length: "2 years", tuition: "$28,800", location: "New Brunswick, NJ", deadline: "Apr 15, 2026 (Int'l)", portfolio: "Not Required" },
-  { ranking: 32, school: "Pennsylvania State University", program: "M.S. in Informatics (Human-Centered Design)", length: "2 years", tuition: "$22,500", location: "State College, PA", deadline: "Jul 18, 2026", portfolio: "Not Required" },
-  { ranking: 33, school: "University of North Texas", program: "M.A. in Design (Interaction Design)", length: "2 years", tuition: "$26,800", location: "Denton, TX", deadline: "Rolling", portfolio: "Required" },
-  { ranking: 34, school: "Michigan State University", program: "M.A. in Media and Information", length: "2 years", tuition: "$24,600", location: "East Lansing, MI", deadline: "Mar 1, 2026", portfolio: "Required" },
-  { ranking: 35, school: "Northeastern University", program: "M.S. in Experience Design", length: "2 years", tuition: "$35,900", location: "Boston, MA", deadline: "Rolling", portfolio: "Not Required" },
-  { ranking: 36, school: "Academy of Art University", program: "M.A. in Interaction & UI/UX Design", length: "2 years", tuition: "$28,000", location: "San Francisco, CA", deadline: "Rolling", portfolio: "Required" },
-  { ranking: 37, school: "Parsons School of Design", program: "M.F.A. in Design and Technology", length: "2 years", tuition: "$58,000", location: "New York, NY", deadline: "Early Jan 2026", portfolio: "Required" },
-  { ranking: 38, school: "School of Visual Arts", program: "M.F.A. in Interaction Design", length: "2 years", tuition: "$59,600", location: "New York, NY", deadline: "Rolling", portfolio: "Required" },
-  { ranking: 39, school: "California College of the Arts", program: "M.Des. in Interaction Design", length: "2 years", tuition: "$77,000", location: "San Francisco, CA", deadline: "Jan 15, 2026 (Priority)", portfolio: "Required" },
-  { ranking: 40, school: "University of Florida", program: "M.S. in Human-Centered Computing", length: "2 years", tuition: "$30,100", location: "Gainesville, FL", deadline: "Dec 5, 2025", portfolio: "Not Required" },
-  { ranking: 41, school: "University of California, Santa Cruz", program: "M.S. in Human Computer Interaction", length: "2 years", tuition: "$28,900", location: "Santa Cruz, CA", deadline: "Dec 10, 2025", portfolio: "Not Required" },
-  { ranking: 42, school: "University of Baltimore", program: "M.S. in Interaction Design and Information Architecture", length: "1 year", tuition: "$43,200", location: "Baltimore, MD", deadline: "Jun 15, 2026", portfolio: "Not Required" },
-  { ranking: 43, school: "Kent State University", program: "M.S. in User Experience Design", length: "1 year", tuition: "$26,500", location: "Kent, OH", deadline: "Jul 27, 2026", portfolio: "Not Required" },
-  { ranking: 44, school: "Brandeis University", program: "M.S. in User-Centered Design", length: "1 year", tuition: "$35,400", location: "Waltham, MA", deadline: "Rolling", portfolio: "Not Required" }
+  { ranking: 26, school: "Pratt Institute", program: "M.S. in Information Experience Design", length: "2 years", tuition: "$32,600", location: "New York, NY", deadline: "Jan 5, 2026 (Priority)", portfolio: "Not Required" },
+  { ranking: 27, school: "Savannah College of Art and Design", program: "M.F.A. in User Experience (UX) Design", length: "2 years", tuition: "$42,100", location: "Savannah, GA", deadline: "Rolling", portfolio: "Required" },
+  { ranking: 28, school: "Maryland Institute College of Art", program: "M.P.S. in UX Design", length: "1 year", tuition: "$37,500", location: "Baltimore, MD", deadline: "Rolling", portfolio: "Optional" },
+  { ranking: 29, school: "University of Wisconsin-Madison", program: "M.S. in Design + Innovation", length: "1 year", tuition: "$48,000", location: "Madison, WI", deadline: "Jul 1, 2026", portfolio: "Required" },
+  { ranking: 30, school: "Rutgers University", program: "M.B.S. in User Experience Design", length: "2 years", tuition: "$28,800", location: "New Brunswick, NJ", deadline: "Apr 15, 2026 (Int'l)", portfolio: "Not Required" },
+  { ranking: 31, school: "Pennsylvania State University", program: "M.S. in Informatics (Human-Centered Design)", length: "2 years", tuition: "$22,500", location: "State College, PA", deadline: "Jul 18, 2026", portfolio: "Not Required" },
+  { ranking: 32, school: "University of North Texas", program: "M.A. in Design (Interaction Design)", length: "2 years", tuition: "$26,800", location: "Denton, TX", deadline: "Rolling", portfolio: "Required" },
+  { ranking: 33, school: "Michigan State University", program: "M.A. in Media and Information", length: "2 years", tuition: "$24,600", location: "East Lansing, MI", deadline: "Mar 1, 2026", portfolio: "Required" },
+  { ranking: 34, school: "Northeastern University", program: "M.S. in Experience Design", length: "2 years", tuition: "$35,900", location: "Boston, MA", deadline: "Rolling", portfolio: "Not Required" },
+  { ranking: 35, school: "Academy of Art University", program: "M.A. in Interaction & UI/UX Design", length: "2 years", tuition: "$28,000", location: "San Francisco, CA", deadline: "Rolling", portfolio: "Required" },
+  { ranking: 36, school: "Parsons School of Design", program: "M.F.A. in Design and Technology", length: "2 years", tuition: "$58,000", location: "New York, NY", deadline: "Jan 5, 2026 (Priority)", portfolio: "Required" },
+  { ranking: 37, school: "School of Visual Arts", program: "M.F.A. in Interaction Design", length: "2 years", tuition: "$59,600", location: "New York, NY", deadline: "Rolling", portfolio: "Required" },
+  { ranking: 38, school: "California College of the Arts", program: "M.Des. in Interaction Design", length: "2 years", tuition: "$77,000", location: "San Francisco, CA", deadline: "Jan 15, 2026 (Priority)", portfolio: "Required" },
+  { ranking: 39, school: "University of Florida", program: "M.S. in Human-Centered Computing", length: "2 years", tuition: "$30,100", location: "Gainesville, FL", deadline: "Dec 5, 2025", portfolio: "Not Required" },
+  { ranking: 40, school: "University of California, Santa Cruz", program: "M.S. in Human Computer Interaction", length: "2 years", tuition: "$28,900", location: "Santa Cruz, CA", deadline: "Dec 10, 2025", portfolio: "Not Required" },
+  { ranking: 41, school: "University of Baltimore", program: "M.S. in Interaction Design and Information Architecture", length: "1 year", tuition: "$43,200", location: "Baltimore, MD", deadline: "Jun 15, 2026", portfolio: "Not Required" },
+  { ranking: 42, school: "Kent State University", program: "M.S. in User Experience Design", length: "1 year", tuition: "$26,500", location: "Kent, OH", deadline: "Jul 27, 2026", portfolio: "Not Required" },
+  { ranking: 43, school: "Brandeis University", program: "M.S. in User-Centered Design", length: "1 year", tuition: "$35,400", location: "Waltham, MA", deadline: "Rolling", portfolio: "Not Required" }
 ];
 ---
 
@@ -68,13 +67,21 @@ const schools = [
 				<table class="w-full">
 					<thead class="bg-gray-50 border-b border-gray-200">
 						<tr class="text-left">
-							<th class="px-6 py-4 text-sm font-medium text-gray-700 w-12">#</th>
+							<th class="px-6 py-4 text-sm font-medium text-gray-700 w-12 cursor-pointer hover:bg-gray-100 transition-colors" onclick="sortTable(0, 'ranking')">
+								#<span class="ml-1 text-xs opacity-50" id="ranking-arrow">↕</span>
+							</th>
 							<th class="px-6 py-4 text-sm font-medium text-gray-700 min-w-[200px]">School</th>
 							<th class="px-6 py-4 text-sm font-medium text-gray-700 min-w-[300px]">Program</th>
 							<th class="px-6 py-4 text-sm font-medium text-gray-700 text-center">Program<br/>Length</th>
-							<th class="px-6 py-4 text-sm font-medium text-gray-700 text-center">Annual Tuition<br/><span class="font-normal text-xs">(2025-2026)</span></th>
+							<th class="px-6 py-4 text-sm font-medium text-gray-700 text-center cursor-pointer hover:bg-gray-100 transition-colors" onclick="sortTable(4, 'tuition')">
+								Annual Tuition<br/><span class="font-normal text-xs">(2025-2026)</span>
+								<span class="ml-1 text-xs opacity-50" id="tuition-arrow">↕</span>
+							</th>
 							<th class="px-6 py-4 text-sm font-medium text-gray-700">Location</th>
-							<th class="px-6 py-4 text-sm font-medium text-gray-700 text-center">Application<br/>Deadline<br/><span class="font-normal text-xs">(Fall 2026)</span></th>
+							<th class="px-6 py-4 text-sm font-medium text-gray-700 text-center cursor-pointer hover:bg-gray-100 transition-colors" onclick="sortTable(6, 'deadline')">
+								Application<br/>Deadline<br/><span class="font-normal text-xs">(Fall 2026)</span>
+								<span class="ml-1 text-xs opacity-50" id="deadline-arrow">↕</span>
+							</th>
 							<th class="px-6 py-4 text-sm font-medium text-gray-700 text-center">Portfolio<br/><span class="font-normal text-xs">(Required?)</span></th>
 						</tr>
 					</thead>
@@ -101,3 +108,108 @@ const schools = [
 		</div>
 	</main>
 </Layout>
+
+<script>
+let currentSort = { column: null, direction: 'asc' };
+
+function sortTable(columnIndex, type) {
+	console.log('Sort function called:', columnIndex, type);
+
+	const table = document.querySelector('tbody');
+	if (!table) {
+		console.error('Table body not found');
+		return;
+	}
+
+	const rows = Array.from(table.querySelectorAll('tr'));
+	console.log('Found', rows.length, 'rows');
+
+	// Determine sort direction
+	if (currentSort.column === columnIndex) {
+		currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+	} else {
+		currentSort.direction = 'asc';
+		currentSort.column = columnIndex;
+	}
+
+	// Reset all arrows
+	const rankingArrow = document.getElementById('ranking-arrow');
+	const tuitionArrow = document.getElementById('tuition-arrow');
+	const deadlineArrow = document.getElementById('deadline-arrow');
+
+	if (rankingArrow) rankingArrow.textContent = '↕';
+	if (tuitionArrow) tuitionArrow.textContent = '↕';
+	if (deadlineArrow) deadlineArrow.textContent = '↕';
+
+	// Set current arrow
+	const arrowId = type === 'ranking' ? 'ranking-arrow' : type === 'tuition' ? 'tuition-arrow' : 'deadline-arrow';
+	const currentArrow = document.getElementById(arrowId);
+	if (currentArrow) {
+		currentArrow.textContent = currentSort.direction === 'asc' ? '↑' : '↓';
+	}
+
+	// Sort rows
+	rows.sort((a, b) => {
+		const aValue = a.cells[columnIndex]?.textContent?.trim() || '';
+		const bValue = b.cells[columnIndex]?.textContent?.trim() || '';
+
+		console.log('Comparing:', aValue, 'vs', bValue);
+
+		let comparison = 0;
+
+		if (type === 'ranking') {
+			// Sort by ranking number
+			const aNum = parseInt(aValue) || 0;
+			const bNum = parseInt(bValue) || 0;
+			comparison = aNum - bNum;
+		} else if (type === 'tuition') {
+			// Extract numeric value from tuition (remove $ and commas)
+			const aNum = parseFloat(aValue.replace(/[\$,]/g, '').split(' ')[0]) || 0;
+			const bNum = parseFloat(bValue.replace(/[\$,]/g, '').split(' ')[0]) || 0;
+			comparison = aNum - bNum;
+		} else if (type === 'deadline') {
+			// Handle rolling deadlines (put them at the end)
+			if (aValue.toLowerCase().includes('rolling') && !bValue.toLowerCase().includes('rolling')) {
+				comparison = 1; // a goes after b
+			} else if (!aValue.toLowerCase().includes('rolling') && bValue.toLowerCase().includes('rolling')) {
+				comparison = -1; // a goes before b
+			} else if (aValue.toLowerCase().includes('rolling') && bValue.toLowerCase().includes('rolling')) {
+				comparison = 0; // both rolling, keep original order
+			} else {
+				// Parse dates for comparison
+				const parseDate = (dateStr) => {
+					const months = {
+						'jan': 0, 'feb': 1, 'mar': 2, 'apr': 3, 'may': 4, 'jun': 5,
+						'jul': 6, 'aug': 7, 'sep': 8, 'oct': 9, 'nov': 10, 'dec': 11
+					};
+
+					const parts = dateStr.toLowerCase().split(' ');
+					if (parts.length >= 3) {
+						const monthKey = parts[0].substring(0, 3);
+						const month = months[monthKey];
+						const day = parseInt(parts[1].replace(',', ''));
+						const year = parseInt(parts[2]);
+						if (!isNaN(month) && !isNaN(day) && !isNaN(year)) {
+							return new Date(year, month, day);
+						}
+					}
+					return new Date(); // fallback
+				};
+
+				const aDate = parseDate(aValue);
+				const bDate = parseDate(bValue);
+				comparison = aDate.getTime() - bDate.getTime();
+			}
+		}
+
+		return currentSort.direction === 'asc' ? comparison : -comparison;
+	});
+
+	// Re-append sorted rows
+	rows.forEach(row => table.appendChild(row));
+	console.log('Sorting complete');
+}
+
+// Make function available globally
+window.sortTable = sortTable;
+</script>
