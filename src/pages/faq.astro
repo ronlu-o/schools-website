@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqs = [
+  {
+    question: "Why don't you include GRE requirements in your program listings?",
+    answer: "As of 2025, most schools have made the GRE optional, some even unconsidered for their HCI/UX graduate admissions. Due to this flexibility, it's up to the applicants to decide whether to submit their GRE scores based on their own strengths and application strategies. "
+  },
+  {
+    question: "What's the difference between HCI, UX, and Interaction Design?",
+    answer: "<p>As noted by Kaiting Huang, whose work inspired this website: </p><p class='mt-3'>UX is the broadest concept, covering the entire experience across all touchpoints between a user and product. This includes branding, usability, visual design, motion, and copywriting. UX encompasses both Interaction Design (IxD) and Human-Computer Interaction (HCI). Interaction Design governs all interactions between users and products, including both physical and digital experiences. HCI focuses specifically on human-computer interactions, emphasizing the digital aspects of design.</p><p class='mt-3'>In practice, however, these terms have become largely interchangeable. An IxD program may closely resemble an HCI program if it emphasizes interface design. Similarly, UX designers, Interaction designers, and Product designers often have overlapping responsibilities in professional settings.</p>"
+  },
+  {
+    question: "How was this directory created?",
+    answer: "This directory was compiled using academic research and professor recommendations, with significant inspiration from Kaiting Huang's comprehensive work at <a href='https://www.topuxschool.kaitinghuang.com/program/us' class='text-blue-600 hover:text-blue-800 underline' target='_blank' rel='noopener noreferrer'>topuxschool.kaitinghuang.com</a>. I focused specifically on programs with strong HCI/UX components and excluded overly broad or non-HCI focused programs to create a curated list for prospective students."
+  }
+];
+---
+
+<Layout title="FAQ - Top UX Schools Directory">
+	<main class="max-w-4xl mx-auto px-4 py-8">
+		<header class="mb-12 text-center">
+			<h1 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h1>
+			<p class="text-lg text-gray-600">Everything you need to know about applying to HCI/UX graduate programs</p>
+		</header>
+
+		<div class="space-y-6">
+			{faqs.map((faq, index) => (
+				<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+					<h3 class="text-lg font-semibold text-gray-900 mb-3">
+						{index + 1}. {faq.question}
+					</h3>
+					<div class="text-gray-700 leading-relaxed" set:html={faq.answer}></div>
+				</div>
+			))}
+		</div>
+
+		<div class="mt-12 bg-blue-50 border border-blue-200 rounded-lg p-6">
+			<h3 class="text-lg font-semibold text-blue-900 mb-3">
+				📚 Additional Resources
+			</h3>
+			<div class="space-y-2 text-blue-800">
+				<p>• Upcoming!</p>
+			</div>
+		</div>
+
+		<div class="mt-8 text-center">
+			<a href="/" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+				← Back to Program Directory
+			</a>
+		</div>
+	</main>
+</Layout>

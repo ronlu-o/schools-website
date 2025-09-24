@@ -2,31 +2,102 @@
 import Layout from '../layouts/Layout.astro';
 
 const schools = [
-  { name: "MIT", location: "Cambridge, MA", ranking: 1 },
-  { name: "Stanford", location: "Stanford, CA", ranking: 2 },
-  { name: "Harvard", location: "Cambridge, MA", ranking: 3 },
+  // Tier 1: The Vanguard
+  { ranking: 1, school: "Carnegie Mellon University", program: "Master of Human-Computer Interaction (MHCI)", length: "1 year", tuition: "$86,250", location: "Pittsburgh, PA", deadline: "Jan 15, 2026", portfolio: "Optional" },
+  { ranking: 2, school: "University of Washington", program: "Master of HCI + Design (MHCID)", length: "1 year", tuition: "$52,700", location: "Seattle, WA", deadline: "Jan 15, 2026", portfolio: "Optional" },
+  { ranking: 3, school: "University of Washington", program: "M.S. in Human Centered Design & Engineering (HCDE)", length: "2 years", tuition: "$25,000", location: "Seattle, WA", deadline: "Jan 15, 2026", portfolio: "Not Required" },
+  { ranking: 4, school: "Stanford University", program: "M.S. in Design Impact", length: "2 years", tuition: "$42,300", location: "Stanford, CA", deadline: "Early Dec 2025", portfolio: "Required (Website)" },
+  { ranking: 5, school: "Georgia Institute of Technology", program: "M.S. in Human-Computer Interaction (MS-HCI)", length: "2 years", tuition: "$26,600", location: "Atlanta, GA", deadline: "Feb 1, 2026", portfolio: "Required (LMC/ID Tracks)" },
+
+  // Tier 2: The Powerhouses
+  { ranking: 6, school: "University of Michigan", program: "M.S. in Information (MSI)", length: "2 years", tuition: "$30,600", location: "Ann Arbor, MI", deadline: "Jan 15, 2026 (Priority)", portfolio: "Not Required" },
+  { ranking: 7, school: "University of California, Berkeley", program: "Master of Information Management and Systems (MIMS)", length: "2 years", tuition: "$46,100", location: "Berkeley, CA", deadline: "Early Jan 2026", portfolio: "Not Required" },
+  { ranking: 8, school: "Parsons School of Design", program: "M.F.A. in Design and Technology", length: "2 years", tuition: "$58,000", location: "New York, NY", deadline: "Early Jan 2026", portfolio: "Required" },
+  { ranking: 9, school: "School of Visual Arts", program: "M.F.A. in Interaction Design", length: "2 years", tuition: "$59,600", location: "New York, NY", deadline: "Rolling", portfolio: "Required" },
+  { ranking: 10, school: "California College of the Arts", program: "M.Des. in Interaction Design", length: "2 years", tuition: "$77,000", location: "San Francisco, CA", deadline: "Jan 15, 2026 (Priority)", portfolio: "Required" },
+  { ranking: 11, school: "University of Maryland", program: "M.S. in Human-Computer Interaction (HCIM)", length: "2 years", tuition: "$29,000", location: "College Park, MD", deadline: "Jan 5, 2026", portfolio: "Required" },
+  { ranking: 12, school: "Purdue University", program: "M.S. in Computer Graphics Technology (UX Design)", length: "2 years", tuition: "$29,200", location: "West Lafayette, IN", deadline: "Feb 1, 2026", portfolio: "Required" },
+  { ranking: 13, school: "University of California, Irvine", program: "Master of Human-Computer Interaction & Design (MHCID)", length: "1 year", tuition: "$49,500", location: "Irvine, CA", deadline: "Mar 15, 2026", portfolio: "Required" },
+  { ranking: 14, school: "Cornell University", program: "M.P.S. in Information Science", length: "1 year", tuition: "$42,700", location: "Ithaca, NY", deadline: "Jan 5, 2026", portfolio: "Not Required" },
+
+  // Tier 3: The Specialists and Rising Stars
+  { ranking: 15, school: "Indiana University Bloomington", program: "M.S. in Human-Computer Interaction/design (HCI/d)", length: "2 years", tuition: "$30,800", location: "Bloomington, IN", deadline: "Jan 1, 2026", portfolio: "Required" },
+  { ranking: 16, school: "University of Texas at Austin", program: "M.S. in Information Studies (MSIS)", length: "2 years", tuition: "$37,100", location: "Austin, TX", deadline: "Jan 5, 2026", portfolio: "Not Required" },
+  { ranking: 17, school: "Northwestern University", program: "M.S. in Engineering Design Innovation (EDI)", length: "2 years", tuition: "$23,000 (per quarter)", location: "Evanston, IL", deadline: "Jan 15, 2026 (Priority)", portfolio: "Required" },
+  { ranking: 18, school: "Tufts University", program: "M.S. in Human Factors Engineering", length: "2 years", tuition: "$54,000", location: "Medford, MA", deadline: "Jan 15, 2026", portfolio: "Not Required" },
+  { ranking: 19, school: "San Jose State University", program: "M.S. in Human Factors and Ergonomics", length: "2 years", tuition: "$14,700", location: "San Jose, CA", deadline: "Feb 1, 2026", portfolio: "Optional" },
+  { ranking: 20, school: "Arizona State University", program: "M.S. in User Experience", length: "2 years", tuition: "$37,100", location: "Tempe, AZ", deadline: "Rolling", portfolio: "Optional" },
+  { ranking: 21, school: "DePaul University", program: "M.S. in Human-Computer Interaction", length: "2 years", tuition: "$30,600", location: "Chicago, IL", deadline: "Jun 15, 2026 (Int'l)", portfolio: "Not Required" },
+  { ranking: 22, school: "Rochester Institute of Technology", program: "M.S. in Human-Computer Interaction", length: "2 years", tuition: "$38,600", location: "Rochester, NY", deadline: "Feb 15, 2026 (Priority)", portfolio: "Not Required" },
+  { ranking: 23, school: "Drexel University", program: "M.S. in Information (HCI/UX)", length: "2 years", tuition: "$37,100", location: "Philadelphia, PA", deadline: "Jul 15, 2025 (Int'l)", portfolio: "Not Required" },
+  { ranking: 24, school: "Illinois Institute of Technology", program: "Master of Design (MDes)", length: "2 years", tuition: "$51,000", location: "Chicago, IL", deadline: "Jan 22, 2026 (Round 1)", portfolio: "Required" },
+  { ranking: 25, school: "University of Colorado Boulder", program: "M.S. in Creative Technology & Design", length: "2 years", tuition: "$32,200", location: "Boulder, CO", deadline: "Feb 15, 2026", portfolio: "Required" },
+  { ranking: 26, school: "Indiana University–Purdue University Indianapolis", program: "M.S. in Human-Computer Interaction", length: "2 years", tuition: "$27,300", location: "Indianapolis, IN", deadline: "Mar 1, 2026", portfolio: "Required" },
+  { ranking: 27, school: "Iowa State University", program: "M.S. in Human Computer Interaction", length: "2 years", tuition: "$24,700", location: "Ames, IA", deadline: "Jan 15, 2026", portfolio: "Not Required" },
+  { ranking: 28, school: "Bentley University", program: "M.S. in Human Factors in Information Design", length: "2 years", tuition: "$58,700", location: "Waltham, MA", deadline: "Mar 15, 2026", portfolio: "Not Required" },
+
+  // Tier 4: Programs of Distinction
+  { ranking: 29, school: "Pratt Institute", program: "M.S. in Information Experience Design", length: "2 years", tuition: "$32,600", location: "New York, NY", deadline: "Jan 5, 2026 (Priority)", portfolio: "Not Required" },
+  { ranking: 30, school: "Savannah College of Art and Design", program: "M.F.A. in User Experience (UX) Design", length: "2 years", tuition: "$42,100", location: "Savannah, GA", deadline: "Rolling", portfolio: "Required" },
+  { ranking: 31, school: "Maryland Institute College of Art", program: "M.P.S. in UX Design", length: "1 year", tuition: "$37,500", location: "Baltimore, MD", deadline: "Rolling", portfolio: "Optional" },
+  { ranking: 32, school: "University of Wisconsin-Madison", program: "M.S. in Design + Innovation", length: "1 year", tuition: "$48,000", location: "Madison, WI", deadline: "Jul 1, 2026", portfolio: "Required" },
+  { ranking: 33, school: "Rutgers University", program: "M.B.S. in User Experience Design", length: "2 years", tuition: "$28,800", location: "New Brunswick, NJ", deadline: "Apr 15, 2026 (Int'l)", portfolio: "Not Required" },
+  { ranking: 34, school: "Pennsylvania State University", program: "M.S. in Informatics (Human-Centered Design)", length: "2 years", tuition: "$22,500", location: "State College, PA", deadline: "Jul 18, 2026", portfolio: "Not Required" },
+  { ranking: 35, school: "University of North Texas", program: "M.A. in Design (Interaction Design)", length: "2 years", tuition: "$26,800", location: "Denton, TX", deadline: "Rolling", portfolio: "Required" },
+  { ranking: 36, school: "Michigan State University", program: "M.A. in Media and Information", length: "2 years", tuition: "$24,600", location: "East Lansing, MI", deadline: "Mar 1, 2026", portfolio: "Required" },
+  { ranking: 37, school: "Northeastern University", program: "M.S. in Experience Design", length: "2 years", tuition: "$35,900", location: "Boston, MA", deadline: "Rolling", portfolio: "Not Required" },
+  { ranking: 38, school: "University of California, Davis", program: "M.S. in Computer Science (HCI Focus)", length: "2 years", tuition: "$15,166", location: "Davis, CA", deadline: "Dec 15, 2025", portfolio: "Not Required" },
+  { ranking: 39, school: "Academy of Art University", program: "M.A. in Interaction & UI/UX Design", length: "2 years", tuition: "$28,000", location: "San Francisco, CA", deadline: "Rolling", portfolio: "Required" },
+  { ranking: 40, school: "University of Florida", program: "M.S. in Human-Centered Computing", length: "2 years", tuition: "$30,100", location: "Gainesville, FL", deadline: "Dec 5, 2025", portfolio: "Not Required" },
+  { ranking: 41, school: "University of California, Santa Cruz", program: "M.S. in Human Computer Interaction", length: "2 years", tuition: "$28,900", location: "Santa Cruz, CA", deadline: "Dec 10, 2025", portfolio: "Not Required" },
+  { ranking: 42, school: "University of Baltimore", program: "M.S. in Interaction Design and Information Architecture", length: "1 year", tuition: "$43,200", location: "Baltimore, MD", deadline: "Jun 15, 2026", portfolio: "Not Required" },
+  { ranking: 43, school: "Kent State University", program: "M.S. in User Experience Design", length: "1 year", tuition: "$26,500", location: "Kent, OH", deadline: "Jul 27, 2026", portfolio: "Not Required" },
+  { ranking: 44, school: "Brandeis University", program: "M.S. in User-Centered Design", length: "1 year", tuition: "$35,400", location: "Waltham, MA", deadline: "Rolling", portfolio: "Not Required" }
 ];
 ---
 
-<Layout title="Top 50 Schools Directory">
-	<main class="container mx-auto px-4 py-8">
-		<header class="text-center mb-12">
-			<h1 class="text-4xl font-bold text-gray-900 mb-4">Top 50 Schools Directory</h1>
-			<p class="text-xl text-gray-600">Discover the world's leading educational institutions</p>
+<Layout title="Top UX Schools - HCI Programs Directory">
+	<main class="max-w-7xl mx-auto px-4 py-8">
+		<header class="mb-8">
+			<h1 class="text-3xl font-bold text-gray-900 mb-2">Top U.S. HCI/UX Master's Programs</h1>
+			<p class="text-gray-600">Curated list of the best focused UX / HCI graduate programs in the United States for 2025-2026</p>
 		</header>
 
-		<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-			{schools.map((school) => (
-				<div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
-					<div class="flex items-center justify-between mb-3">
-						<span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">
-							#{school.ranking}
-						</span>
-					</div>
-					<h3 class="text-xl font-semibold text-gray-900 mb-2">{school.name}</h3>
-					<p class="text-gray-600">{school.location}</p>
-				</div>
-			))}
-		</section>
+		<div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+			<div class="overflow-x-auto">
+				<table class="w-full">
+					<thead class="bg-gray-50 border-b border-gray-200">
+						<tr class="text-left">
+							<th class="px-6 py-4 text-sm font-medium text-gray-700 w-12">#</th>
+							<th class="px-6 py-4 text-sm font-medium text-gray-700 min-w-[200px]">School</th>
+							<th class="px-6 py-4 text-sm font-medium text-gray-700 min-w-[300px]">Program</th>
+							<th class="px-6 py-4 text-sm font-medium text-gray-700 text-center">Program<br/>Length</th>
+							<th class="px-6 py-4 text-sm font-medium text-gray-700 text-center">Annual Tuition<br/><span class="font-normal text-xs">(2025-2026)</span></th>
+							<th class="px-6 py-4 text-sm font-medium text-gray-700">Location</th>
+							<th class="px-6 py-4 text-sm font-medium text-gray-700 text-center">Application<br/>Deadline<br/><span class="font-normal text-xs">(Fall 2026)</span></th>
+							<th class="px-6 py-4 text-sm font-medium text-gray-700 text-center">Portfolio<br/><span class="font-normal text-xs">(Required?)</span></th>
+						</tr>
+					</thead>
+					<tbody class="divide-y divide-gray-100">
+						{schools.map((school) => (
+							<tr class="hover:bg-gray-50 transition-colors">
+								<td class="px-6 py-6 text-sm font-medium text-gray-900">{school.ranking}</td>
+								<td class="px-6 py-6">
+									<div class="font-medium text-gray-900 text-sm leading-tight">
+										{school.school}
+									</div>
+								</td>
+								<td class="px-6 py-6 text-sm text-gray-900 leading-tight">{school.program}</td>
+								<td class="px-6 py-6 text-sm text-gray-900 text-center font-medium">{school.length}</td>
+								<td class="px-6 py-6 text-sm text-gray-900 text-center font-medium">{school.tuition}</td>
+								<td class="px-6 py-6 text-sm text-gray-900">{school.location}</td>
+								<td class="px-6 py-6 text-sm text-gray-900 text-center">{school.deadline}</td>
+								<td class="px-6 py-6 text-sm text-gray-900 text-center">{school.portfolio}</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</main>
 </Layout>
